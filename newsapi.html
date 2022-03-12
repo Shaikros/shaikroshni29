@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<script>
+    function getnews(){
+        fetch("htts://cors-anywhere.herokoapp.com/http://newsapi.org/v2/top-headlines?country=us&apikey=b96aee8606b9d38038ccc6efbcf2c6c1",
+        {header: new Headers({"X-Requested-With":"wkgfjkhdgfhkusvsbkhbhb})})
+         .then(a>=a.json())
+         .then(response=>{
+             for(var i=0;i<response.articles.length;i++){
+                 document.getElementById("output").innerHTML=+"<div style='padding-top:20px;'><img style ='float:left;
+                    width:150px;'
+                    src="'+response.articles[i].urlToImage+"'><h1>"=response.articles[i].title+"</h1>"+response.articles[i].source.name+"<br>"+response.article[i].description+<a href="'+response.articles[i].url="'target="_blank'>"+
+                    response.articles[i].url+</a></div>";
+                           }
+         })
+        }
+</script>
+<button onclick='getnews()'>GET news!!!!</button>
+<div id="output"
+</div>
